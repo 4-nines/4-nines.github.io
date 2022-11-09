@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SAIT 4Nines</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="website project.css" rel="stylesheet">
+
+        <script>
+            function contactconfirm() {
+                alert("Thank you for reaching out. We'll get back to you shortly!");
+                window.location.href="contactcomplete.html";
+            }
+        </script>
+    </head>
+
+    <body>
+        <ul class="topnav">
+            <li><a href="index.html"><img src="images/Logo.png"></a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <br><br><br><br><br><br>
+
+        <form action="">
+            <div class="form-line-container">
+                <div class="form-line-child">
+                    <label for="firstname">First Name:</label>
+                    <input class="personal-info-input" type="text" id="firstname" name="firstname">
+                </div>
+                <div class="form-line-child">
+                    <label for="lastname">Last Name:</label>
+                    <input class="personal-info-input" type="text" id="lastname" name="lastname">
+                </div>
+            </div>
+            <div class="form-line-container">
+                <div class="form-line-child">
+                    <label class="center-label" for="email">   Email:  </label>
+                    <input class="personal-info-input" type="email" id="email" name="email">
+                </div>
+                <div class="form-line-child">
+                    <label class="center-label" for="phone">  Phone:  </label>
+                    <input class="personal-info-input" type="tel" id="phone" name="phone">
+                </div>
+            </div>
+            <div id="form-comment-container">
+                <label id="comment-label" for="usertext">How can we help?</label>
+                <textarea id="usertext" name="usertext" rows="4"></textarea>
+            </div>
+            <div id="button-container">
+                <input id="submit-button" type="submit" onclick="contactconfirm()" value="Submit">
+            </div>
+        </form>
+
+
+        <ul class="bottombar">
+            <li><b>Group 4: iTeam</b></li>
+            <li><b>Chase, Emily, Justin, Matthew, Quinn</b></li>
+        </ul>
+    </body>
+</html>
+
+<!--Put bar to float left
+    Set size of each 4 divs to be same pixels
+    Padding on phone and Email to get align center correct
+    Div for each line (center content)
+        Div for each one of 2 on the line here (give it pixel size) (give it padding)
+                    Padding on Email and Phone label to center them-->
