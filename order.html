@@ -9,6 +9,7 @@
         <script>
           function confirmation() {
             alert("Thank you for your order!");
+            window.location.href="ordercomplete.html";
           }
         </script>
     </head>
@@ -24,7 +25,7 @@
 
         <br><br><br><br><br><br>
         
-        <form method="post" action="ordercomplete.html" onsubmit="confirmation()">
+        <form action="">
               <div class="form-line-container">
                 <div class="form-line-child">
                     <label for="firstname">First Name:</label>
@@ -68,7 +69,7 @@
             </li>
    
             <li class="orderlist">
-             <form>
+             <form method="post" action="ordercomplete.html" onsubmit="confirmation()">
                <label for="order"><h3>Choose a Time:</h3></label>
                <select name="order" id="order">
                  <option value="11">11:00 AM</option>
@@ -88,7 +89,7 @@
             </li>
            </ul>
            <div id="button-container">
-            <input id="submit-button" type="submit" value="Submit">
+            <input id="submit-button" type="submit" onclick="confirmation()" value="Submit">
         </div>
            
         
