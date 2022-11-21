@@ -7,8 +7,9 @@
         <link href="website project.css" rel="stylesheet">
 
         <script>
-          function contactconfirm() {
+          function confirmation() {
             alert("Thank you for your order!");
+            window.location.href="ordercomplete.html";
           }
         </script>
     </head>
@@ -22,9 +23,9 @@
             <li><a href="contact.html">Contact</a></li>            
         </ul>
 
-        <br><br><br><br><br><br>
+        <br><br><br><br><br>
         
-        <form id="contact-form" action="ordercomplete.html" onsubmit="contactconfirm()">
+        <form action="ordercomplete.html" onsubmit="confirmation()">
               <div class="form-line-container">
                 <div class="form-line-child">
                     <label for="firstname">First Name:</label>
@@ -46,11 +47,10 @@
                 <div class="form-line-container"></div>
                 </div>
             </div>
-          </form>
+          
 
           <ul class="orderform">
             <li class="orderlist">
-               <form>
                <label for="order"><h3>Choose a menu item:</h3></label>
                <select name="order" id="order">
                  <optgroup label="$14">
@@ -63,12 +63,10 @@
                  <optgroup label="$8">
                    <option value="Korean">Korean Bulgogi Pork Poutine</option>
                  </optgroup>
-               </select>
-             </form>
+                </select>
             </li>
    
             <li class="orderlist">
-             <form method="post" action="ordercomplete.html" onsubmit="confirmation()">
                <label for="order"><h3>Choose a Time:</h3></label>
                <select name="order" id="order">
                  <option value="11">11:00 AM</option>
@@ -82,16 +80,15 @@
                  <option value="15">3:00 PM</option>
                  <option value="15.5">3:30 PM</option>
                  <option value="16">4:00 PM</option>
-                 
                </select>
-             </form>
             </li>
            </ul>
+
+      
            <div id="button-container">
-            <!--<input id="submit-button" type="submit" onclick="confirmation()" value="Submit">-->
-            <button type="submit" form="contact-form">Submit</button>
+            <input id="submit-button" type="submit" value="Submit">
         </div>
-           
+      </form>
         
 
         <ul class="bottombar">
